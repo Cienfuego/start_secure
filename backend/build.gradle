@@ -10,7 +10,7 @@ description = 'secure login functionality'
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(17)
+		languageVersion = JavaLanguageVersion.of(23)
 	}
 }
 
@@ -39,6 +39,9 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	//cognito
+	implementation 'com.amazonaws:aws-java-sdk-cognitoidp:1.12.767'
 }
 
 tasks.named('test') {
